@@ -1,0 +1,244 @@
+@supports (display: grid) {
+	#profile-confirm {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-areas: ". wrap .";
+		margin-top: 50px;
+	}
+
+	.profile-confirm-wrap {
+		display: grid;
+		grid-template-rows: auto auto auto;
+		grid-area: wrap;
+		grid-gap: 20px;
+	}
+
+	.profile-confirm-wrap .profile-confirm-title {
+		font-weight: 700;
+		font-size: 22px;
+		letter-spacing: -.5px;
+	}
+
+	.profile-confirm-wrap .profile-confirm-description {
+		color: #9c9c9c;
+	}
+
+	.profile-confirm-wrap .profile-confirm-uploaders {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-gap: 20px;
+	}
+
+	.profile-confirm-wrap .profile-confirm-uploaders .uploader {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		grid-gap: 30px;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	.profile-confirm-wrap .profile-confirm-uploaders .uploader.success {
+		cursor: default;
+	}
+
+	.profile-confirm-wrap .profile-confirm-uploaders .uploader.wait, .profile-confirm-wrap .profile-confirm-uploaders .uploader.uploading {
+		cursor: no-drop;
+	}
+
+	.profile-confirm-uploaders .uploader .upload-icon {
+		grid-column: 1 / 2;
+		grid-row: 1;
+		width: 32px;
+		height: 32px;
+		background: url(upload.svg) no-repeat center #eee;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+	.profile-confirm-uploaders .uploader.success .upload-icon {
+		background: url(ok.svg) no-repeat center #eee;
+	}
+
+	.profile-confirm-uploaders .uploader.wait .upload-icon {
+		background: url(wait.svg) no-repeat center #eee;
+	}
+
+	.profile-confirm-uploaders .uploader.uploading .upload-icon {
+		background: url(spin.svg) no-repeat center #eee;
+	}
+
+	.profile-confirm-uploaders .uploader .upload-text {
+		grid-column: 2 / 3;
+		grid-row: 1;
+		display: grid;
+		grid-template-rows: auto auto;
+		align-content: space-around;
+		align-self: stretch;
+	}
+
+	.profile-confirm-uploaders .uploader .upload-text-subtitle {
+		color: #9c9c9c;
+		word-wrap: anywhere;
+	}
+
+	.profile-confirm-uploaders .uploader .upload-text-title {
+		text-decoration: underline;
+	}
+
+	.profile-confirm-uploaders .uploader.wait .upload-text-title, .profile-confirm-uploaders .uploader.success .upload-text-title,  .profile-confirm-uploaders .uploader.uploading .upload-text-title {
+		text-decoration: none;
+	}
+
+	.profile-confirm-uploaders .uploader .upload-check {
+		grid-column: 3 / 4;
+		grid-row: 1;
+	}
+
+	.profile-confirm-uploaders .uploader.wait .upload-check::before {
+		content: "Идёт проверка";
+		display: block;
+		color: #9C9C9C;
+	}
+
+	.profile-confirm-uploaders .uploader.success .upload-check::before {
+		content: "Проверено";
+		display: block;
+		color: #77B53C;
+	}
+
+	.profile-confirm-uploaders .uploader.error .upload-check::before {
+		content: "Отклонено";
+		display: block;
+		color: #D52011;
+	}
+
+	.profile-confirm-uploaders .uploader input {
+		grid-column: 1 / 4;
+		grid-row: 1;
+		display: block;
+		align-self: stretch;
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	.profile-confirm-uploaders .uploader.wait input, .profile-confirm-uploaders .uploader.uploading input, .profile-confirm-uploaders .uploader.success input {
+		display: none;
+	}
+}
+
+/* IE styling block */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	#profile-confirm {
+		display: block;
+		padding-left: 25%;
+		margin-top: 50px;
+	}
+	.profile-confirm-wrap {
+		width: 66%;
+		display: flex;
+		flex-direction: column;
+	}
+	.profile-confirm-wrap .profile-confirm-title {
+		font-weight: 700;
+		font-size: 22px;
+		letter-spacing: -0.5px;
+		margin-bottom: 20px;
+	}
+	.profile-confirm-wrap .profile-confirm-description {
+		color: #9c9c9c;
+		margin-bottom: 20px;
+	}
+	.profile-confirm-wrap .profile-confirm-uploaders {
+		display: flex;
+		flex-direction: column;
+	}
+	.profile-confirm-wrap .profile-confirm-uploaders .uploader {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+	.profile-confirm-wrap .profile-confirm-uploaders .uploader.success {
+		cursor: default;
+	}
+	.profile-confirm-wrap .profile-confirm-uploaders .uploader.wait, .profile-confirm-wrap .profile-confirm-uploaders .uploader.uploading {
+		cursor: no-drop;
+	}
+	.profile-confirm-uploaders .uploader input {
+		display: block;
+		align-self: stretch;
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+	}
+	.profile-confirm-uploaders .uploader.wait input, .profile-confirm-uploaders .uploader.uploading input, .profile-confirm-uploaders .uploader.success input {
+		display: none;
+	}
+	.profile-confirm-uploaders .uploader .upload-icon {
+		width: 32px;
+		height: 32px;
+		background: url(upload.svg) no-repeat center #eee;
+		padding: 10px;
+		border-radius: 5px;
+		margin-right: 20px;
+		flex-shrink: 0;
+		flex-grow: 0;
+	}
+	.profile-confirm-uploaders .uploader.success .upload-icon {
+		background: url(ok.svg) no-repeat center #eee;
+	}
+	.profile-confirm-uploaders .uploader.wait .upload-icon {
+		background: url(wait.svg) no-repeat center #eee;
+	}
+	.profile-confirm-uploaders .uploader.uploading .upload-icon {
+		background: url(spin.svg) no-repeat center #eee;
+	}
+	.profile-confirm-uploaders .uploader .upload-text {
+		display: flex;
+		flex-direction: column;
+		align-self: stretch;
+		justify-content: space-around;
+		flex-grow: 1;
+		flex-shrink: 1;
+		overflow: hidden;
+	}
+	.profile-confirm-uploaders .uploader .upload-text-title {
+		text-decoration: underline;
+	}
+	.profile-confirm-uploaders .uploader.wait .upload-text-title, .profile-confirm-uploaders .uploader.success .upload-text-title,  .profile-confirm-uploaders .uploader.uploading .upload-text-title {
+		text-decoration: none;
+	}
+	.profile-confirm-uploaders .uploader .upload-text-subtitle {
+		color: #9c9c9c;
+		word-wrap: break-word;
+		word-break: break-all;
+		max-width: 20vw;
+	}
+	.profile-confirm-uploaders .uploader .upload-check {
+		margin-left: 20px;
+	}
+	.profile-confirm-uploaders .uploader.wait .upload-check::before {
+		content: "Идёт проверка";
+		display: block;
+		color: #9C9C9C;
+	}
+	.profile-confirm-uploaders .uploader.success .upload-check::before {
+		content: "Проверено";
+		display: block;
+		color: #77B53C;
+	}
+	.profile-confirm-uploaders .uploader.error .upload-check::before {
+		content: "Отклонено";
+		display: block;
+		color: #D52011;
+	}
+}
+/* /end IE styling block */

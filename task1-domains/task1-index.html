@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--<link rel="shortcut icon" href="/favicon.png" />-->
+		<title>Заголовок</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet" />
+		<link rel="stylesheet" href="./normalize.css" type="text/css" />
+		<link rel="stylesheet" href="./styles.css" type="text/css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="page tab1" data-page="1">
+				<div class="main">
+					<div class="title">
+						<span class="brand">Джино</span><span class="category">Домены</span>
+					</div>
+					<div class="promo">Только до 31 января</div>
+					<div class="head">Честная цена <span>за домен .RU — 39 ₽</span></div>
+					<div class="formwrap">
+						<div class="form">
+							<input type="text" id="input" class="check-domain" placeholder="example.ru" pattern="\w+\.\w+" />
+							<button class="check">Проверить</button>
+							<div class="response hidden">Домен <span class="domain">example.ru</span> — свободен. <a href="#">Зарегистрировать за 39 ₽</a></div>
+							<div class="response-error hidden">Домен введён неправильно.</div>
+						</div>
+					</div>
+					<a class="signup" href="#">Создать аккаунт</a>
+					<div class="scroll">
+						<picture>
+							<source srcset="down@2x.png 2x, down.png 1x" width="27" height="50" />
+							<img src="down.png" width="27" height="50" />
+						</picture>
+					</div>
+					<div class="scrolldots">
+						<div class="dot current" data-page="1"></div>
+						<div class="dot" data-page="2"></div>
+						<div class="dot" data-page="3"></div>
+					</div>
+				</div>
+			</div>
+			<div class="page tab2" data-page="2">
+				<div class="main">
+					<div class="title">
+						<span class="brand">Джино</span><span class="category">Домены</span>
+					</div>
+					<div class="head">Зарегистрировав у нас домен, вы получите</div>
+					<div class="features">
+						<div class="block" data-block="1">
+							<div class="icon"></div>
+							<div class="text">Сайт-визитка</div>
+						</div>
+						<div class="block" data-block="2">
+							<div class="icon"></div>
+							<div class="text">Поддержка DNS</div>
+						</div>
+						<div class="block" data-block="3">
+							<div class="icon"></div>
+							<div class="text">Сертификат о владении доменом</div>
+						</div>
+						<div class="block" data-block="4">
+							<div class="icon"></div>
+							<div class="text">Автопродление</div>
+						</div>
+						<div class="block" data-block="5">
+							<div class="icon"></div>
+							<div class="text">Облачное хранилище на 20 Гб</div>
+						</div>
+						<div class="block" data-block="6">
+							<div class="icon"></div>
+							<div class="text">Бесплатный SSL-сертификат</div>
+						</div>
+						<div class="block" data-block="7">
+							<div class="icon"></div>
+							<div class="text">DNSSEC в один клик</div>
+						</div>
+						<div class="block" data-block="8">
+							<div class="icon"></div>
+							<div class="text">Перенаправление</div>
+						</div>
+						<div class="info" data-block="1">
+							<div data-block="1">
+								<p>Для любого вашего домена, зарегистрированного на «Джино», вы можете в несколько кликов создать простую страницу-визитку. Это удобно, если ваш основной сайт ещё не готов, или если домен вам нужен только для почты.</p>
+								<p>Вы можете разместить здесь краткую информацию о себе или вашем бизнесе, ссылки на аккаунты в соцсетях и любые другие сайты. Создание и поддержка базового варианта сайта-визитки абсолютно бесплатны.</p>
+							</div>
+							<div data-block="2">
+								<p>Зарегистрировав домен через «Джино», вы бесплатно получаете постоянную возможность изменения NS-записей и направления домена туда, куда вам хочется.</p>
+								<p>У вас несколько доменов? Мы предоставляем бесплатную поддержку DNS для всех доменов, зарегистрированных и поддерживаемых «Джино».</p>
+							</div>
+							<div data-block="3">
+								<p>Подтвердите владение доменным именем с помощью официального сертификата «Джино». Вам достаточно распечатать документ в формате PDF, который будет доступен в панели управления сразу же после делегирования домена.</p>
+							</div>
+							<div data-block="4">
+								<p>С помощью функции «Автопродление» больше не нужно беспокоиться о том, что ваш домен внезапно перестанет работать. «Джино» заблаговременно продлит регистрацию на следующий период и вышлет вам уведомление об этом.</p>
+							</div>
+							<div data-block="5">
+								<p>Специально для своих клиентов «Джино» предлагает абсолютно бесплатный сервис — «Джино.Облако». Это надежное место для хранения файлов — здесь точно поместится всё. Вы получите постоянный доступ к своей музыке, фотографиям и документам и сможете без труда делиться данными с кем угодно.</p>
+							</div>
+							<div data-block="6">
+								<p>Будучи клиентом «Джино», вы можете бесплатно получить SSL-сертификат от удостоверяющего центра Let’s Encrypt. Данный сертификат позволит вашим сайтам работать по безопасному протоколу HTTPS и избежать предупреждений браузера о том, что на сайте используется незашифрованное соединение.</p>
+								<p>Вы можете легко обзавестись сертификатом: в разделе «Домены» вашего аккаунта выберите нужный домен и на странице его настроек перейдите во вкладку «SSL». Сертификат выдаётся по нажатию одной кнопки и продлевается автоматически.</p>
+							</div>
+							<div data-block="7">
+								<p>С помощью технологии цифрового подписывания ответа DNS-сервера вы можете застраховаться от возможной его подмены и быть уверенными в том, что посетители вашего сайта не попали на замаскированный сайт злоумышленников.</p>
+								<p>Для подключения DNSSEC необходимо перейти в соответствующую вкладку в настройках вашего домена и нажать кнопку «Включить».</p>
+							</div>
+							<div data-block="8">
+								<p>Зарегистрировав домен на «Джино», вы сможете в любой момент просто и бесплатно перенаправить его на любую страницу любого сайта.</p>
+								<p>У вас есть своя группа в социальной сети? Дайте ей персональный домен и она сможет стать полноценным сайтом, а не только страницей соцсети! Персонифицирование при помощи перенаправления доменного имени от «Джино» — это дополнительный инструмент в продвижении и идентификации вашей деятельности.</p>
+							</div>
+						</div>
+					</div>
+					<a class="signup" href="#">Создать аккаунт</a>
+					<div class="scrolldots">
+						<div class="dot" data-page="1"></div>
+						<div class="dot current" data-page="2"></div>
+						<div class="dot" data-page="3"></div>
+					</div>
+				</div>
+			</div>
+			<div class="page tab3" data-page="3">
+				<div class="main">
+					<div class="title">
+						<span class="brand">Джино</span><span class="category">Домены</span>
+					</div>
+					<div class="head">Почему стоит выбрать «Джино»?</div>
+					<div class="text">«Джино» более 18 лет на рынке, имеет 270 000 довольных клиентов, собственную панель управления и многое другое.</div>
+					<a class="signup" href="#">Создать аккаунт</a>
+					<div class="bonus">
+						<div class="bonustext">Вы получите <strong>1000 баллов</strong> в системе <a href="#">Джино.Плюсы</a>, зарегистрировавшись в течении <strong>24 часов</strong> после посещения данной страницы</div>
+						<div class="bonusinfo">1000</div>
+					</div>
+					<div class="copyright">© «<a href="#">Джино</a>» 2003—2017. «Джино» является зарегистрированным товарным знаком. Лицензия на телематические услуги связи № 97495 от 09.03.2012. <a href="#">Правовая информация</a>.</div>
+					<div class="scrolldots">
+						<div class="dot" data-page="1"></div>
+						<div class="dot" data-page="2"></div>
+						<div class="dot current" data-page="3"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+		<script type="text/javascript" remove>if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))document.write('<script src="script_ie.js"><\/script>');document.body.removeChild(document.querySelector("script[remove]"));</script>
+	</body>
+</html>
